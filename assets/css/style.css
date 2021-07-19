@@ -20,7 +20,7 @@ body {
     min-height: 100vh;
     justify-content: center;
     background: radial-gradient(circle, var(--just-black) 0%, rgba(19,41,61,1) 80%);
-  }
+}
 
 header {
     padding: 40px;
@@ -41,7 +41,7 @@ header p {
 .large-font {
     font-size: 3.5em;
     text-align: center;
-  }
+}
 
 button {
     background: radial-gradient(circle, var(--toxic-green) 0%, var(--just-black) 100%);
@@ -58,13 +58,19 @@ button {
     transition-property: background-color;
     transition-timing-function: linear;
     margin-top: 0.6em;
-  }
+}
   
-  main {
-      display: none;
-  }
+main {
+    display: none;
+}
 
-  .container-01 {
-      color: var(--plain-white);
-      text-align: center;
-  }
+.time {
+    display: block;
+    text-align: left;
+    color: white;
+}
+
+.question {
+    color: var(--plain-white);
+    text-align: center;
+}
