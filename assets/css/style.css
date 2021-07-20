@@ -45,10 +45,10 @@ header p {
 
 button {
     background: radial-gradient(circle, var(--toxic-green) 0%, var(--just-black) 100%);
-    border-radius: 8px;
+    border-radius: 10px;
     color: #13293d;
     cursor: pointer;
-    font-size: 2em;
+    font-size: 1rem;
     letter-spacing: 0.21px;
     line-height: 16px;
     max-width: 255px;
@@ -57,7 +57,7 @@ button {
     transition-duration: 0.15s;
     transition-property: background-color;
     transition-timing-function: linear;
-    margin-top: 0.6em;
+    margin-top: 1rem;
 }
   
 main {
