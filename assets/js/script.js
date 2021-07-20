@@ -1,7 +1,5 @@
-var startButtonEl = document.querySelector("#start-button");
-var cardContainerEl = document.querySelector("card-container");
-var timeEl = document.querySelector(".time");
-var secondsLeft = 15+1;
+var questionsArray;
+var answersArray;
 
 // Questions and answers obtained from tutorialspoint.com
 // Answers: D, A, B, B, A, D, D, A, B, C
@@ -26,91 +24,5 @@ answersArray = [["Less server interaction", "Immediate feedback to visitors",
                 ['concat()', 'join()', 'pop()', 'map()'],
                 ['reverse()', 'shift()', 'slice()', 'some()'] ];
 
-function init() {
-    // Start the timer
-    setTime();
-    // Loop through all of the questions
-    i = 0;
-    generateQuestion(i);
-    
-    
-}
-
-function generateQuestion(questionIndex) {
-    // Create the question content
-    var tagQuestion = document.createElement('div');
-    tagQuestion.textContent = questionsArray[questionIndex];
-    document.body.children[1].children[1].appendChild(tagQuestion);
-
-    // Create the answer buttons with text
-    var answer1 = document.createElement('button');
-    answer1.setAttribute('id', 'button1');
-    answer1.innerHTML = answersArray[questionIndex][0];
-    document.body.children[1].children[1].appendChild(answer1);
-    var answer2 = document.createElement('button');
-    answer2.setAttribute('id', 'button2');
-    answer2.innerHTML = answersArray[questionIndex][1];
-    document.body.children[1].children[1].appendChild(answer2);
-    var answer3 = document.createElement('button');
-    answer3.setAttribute('id', 'button3');
-    answer3.innerHTML = answersArray[questionIndex][2];
-    document.body.children[1].children[1].appendChild(answer3);
-    var answer4 = document.createElement('button');
-    answer4.setAttribute('id', 'button4');
-    answer4.innerHTML = answersArray[questionIndex][3];
-    document.body.children[1].children[1].appendChild(answer4);
-
-    // Add event listeners to each button
-    // If a button is pressed, the question should dissapear
-    // After the question dissappears, a new question should appear
-    var button1El = document.querySelector('#button1');
-    button1El.addEventListener('click', function(){
-        console.log('button1 pressed')
-        var y = document.getElementById('question').style.display = 'none';
-    })
-    var button2El = document.querySelector('#button2');
-    button2El.addEventListener('click', function(){
-        console.log('button2 pressed')
-        var y = document.getElementById('question').style.display = 'none';
-    })
-    var button3El = document.querySelector('#button3');
-    button3El.addEventListener('click', function(){
-        console.log('button3 pressed')
-        var y = document.getElementById('question').style.display = 'none';
-    })
-    var button4El = document.querySelector('#button4');
-    button4El.addEventListener('click', function(){
-        console.log('button4 pressed')
-        var y = document.getElementById('question').style.display = 'none';
-    })
-}
-
-function setTime() {
-    //Sets interval in variable
-    var timerInterval = setInterval(function() {
-        secondsLeft--;
-        timeEl.textContent = "Timer : " + secondsLeft;
-
-        if (secondsLeft === 0) {
-            // Stop timer and clear it
-            clearInterval(timerInterval);
-            // Initiate gameover function
-            gameOver();
-        }
-    }, 1000);
-}
-
-function gameOver() {
-    document.getElementById('question').style.display = 'none';
-    return;
-}
-
-startButtonEl.addEventListener("click", function() {
-    var x = document.getElementById("header");
-    x.style.display = "none";
-    var y = document.getElementById("card-container");
-    y.style.display = "block";
-    init();
-});
 
 
