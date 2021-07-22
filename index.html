@@ -1,24 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="./assets/css/style.css" />
     <title>Code Quiz</title>
 </head>
+
 <body>
-    <header id="header">
-        
-        <div class="large-font">Code Quiz</div>
-        <p>Try to answer the following coding questions within
-            the alloted time limit. Good luck!
-        </p>
-        <button class="start-button" id="start-button">Start</button>
-        
-    </header>
+    <div>
+        <div class="intro">
+            <h1>Code Quiz</h1>
+            <p>Try to answer the following coding questions within
+                the alloted time limit. Good luck!
+            </p>
+            <button class="start-button">Start</button>
+        </div>
 
+        <div class="quiz hidden">
+            <div class="time" style="text-align:left;"></div>
+            <div class="question"></div>
+            <div class="choices">
+                <ul>
+                    <button class="button1 hidden"></button>
+                    <button class="button2 hidden"></button>
+                    <button class="button3 hidden"></button>
+                    <button class="button4 hidden"></button>
+                </ul>
+            </div>
+            <div class="answer"></div>
+        </div>
 
+        <div class="game-over hidden">
+            <h1>Game over!</h1>
+        </div>
+    </div>
 
     <script src="./assets/js/script.js"></script>
 </body>
+
 </html>
