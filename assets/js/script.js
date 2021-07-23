@@ -95,9 +95,11 @@ function generateQuestion(index) {
 
         title.textContent = randomQuestion.title;
         choices.innerHTML = randomQuestion.choices.map(choice => `<button>${choice}</button>`).join('');
-        
+        document.body.children[0].children[1].children[2].children[0].children[0].setAttribute('class', 'button1');
+        document.body.children[0].children[1].children[2].children[0].children[1].setAttribute('class', 'button2');
+        document.body.children[0].children[1].children[2].children[0].children[2].setAttribute('class', 'button3');
+        document.body.children[0].children[1].children[2].children[0].children[3].setAttribute('class', 'button4');
         //answer.textContent = randomQuestion.answer;
-        
         index++;
         
     } else {
@@ -108,7 +110,8 @@ function generateQuestion(index) {
 
 // Timer
 var timeEl = document.querySelector(".time");
-var secondsLeft = 10;
+const totalTime = 10;
+var secondsLeft = totalTime;
 function setTime() {
     // Sets interval in variable
     var timerInterval = setInterval(function() {
@@ -120,12 +123,13 @@ function setTime() {
         clearInterval(timerInterval);
         document.querySelector('.quiz').classList.toggle('hidden');
         document.querySelector('.game-over').classList.toggle('hidden');
+        secondsLeft = totalTime;
       }
   
     }, 1000);
-  }
+}
 
-document.querySelector('.start-button').addEventListener('click', function(){
+document.querySelector('.start-button').addEventListener('click', function() {
     document.querySelector('.intro').classList.toggle('hidden');
     document.querySelector('.quiz').classList.toggle('hidden');
     document.querySelector('.button1').classList.toggle('hidden');
@@ -134,8 +138,16 @@ document.querySelector('.start-button').addEventListener('click', function(){
     document.querySelector('.button4').classList.toggle('hidden');
     setTime();
     generateQuestion(index);
-    
-})
+});
 
+document.querySelector('.reset-button').addEventListener('click', function() {
+    document.querySelector('.intro').classList.toggle('hidden');
+    document.querySelector('.game-over').classList.toggle('hidden');
+    
+});
+
+document.querySelector('.button1').addEventListener('click', function() {
+    document.body.children[0].children[1].children[2].children[0].children[0].querySelector('.button1').classList.toggle('hidden');
+})
 
 
