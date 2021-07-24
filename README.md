@@ -32,7 +32,7 @@ Screenshot:
 Code provided by Garrett Kegel.
 Screenshot provided by Garrett Kegel.
 Questions and answers used in code provided by tutorialspoint.com/javascript/javascript_online_quiz.htm
-Starting template code for generate question by Treighton Mauldin (Instructor).
+#Starting template code for generate question by Treighton Mauldin (Instructor).
 
 
 ## License
